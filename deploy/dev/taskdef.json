@@ -1,0 +1,111 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:746420814810:task-definition/data-apne2-rdd-web-ecs-task-dev:5",
+    "containerDefinitions": [
+        {
+            "name": "data-apne2-rdd-web-container-dev",
+            "image": "746420814810.dkr.ecr.ap-northeast-2.amazonaws.com/data-apne2-rdd-web-ecr-dev:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/aws/ecs/svc/data-apne2-rdd-web-ecs-task-dev",
+                    "awslogs-region": "ap-northeast-2",
+                    "awslogs-stream-prefix": "data-apne2-rdd-web-container-dev"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "data-apne2-rdd-web-ecs-task-dev",
+    "taskRoleArn": "arn:aws:iam::746420814810:role/data-apne2-rdd-ecs-task-exec-role-dev",
+    "executionRoleArn": "arn:aws:iam::746420814810:role/data-apne2-rdd-ecs-task-exec-role-dev",
+    "networkMode": "awsvpc",
+    "revision": 5,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "runtimePlatform": {
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-11-20T05:48:45.402Z",
+    "registeredBy": "arn:aws:sts::746420814810:assumed-role/cdk-hnb659fds-cfn-exec-role-746420814810-ap-northeast-2/AWSCloudFormation",
+    "tags": [
+        {
+            "key": "Environment",
+            "value": "dev"
+        },
+        {
+            "key": "Service",
+            "value": "data"
+        },
+        {
+            "key": "Team",
+            "value": "data"
+        },
+        {
+            "key": "Application",
+            "value": "ringdingdong"
+        }
+    ]
+}

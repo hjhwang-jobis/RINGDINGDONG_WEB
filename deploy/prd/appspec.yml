@@ -1,0 +1,11 @@
+version: 0.0
+Resources:
+ - TargetService:
+     Type: AWS::ECS::Service
+     Properties:
+       TaskDefinition: <TASK_DEFINITION>
+       LoadBalancerInfo:
+         ContainerName: "data-apne2-rdd-web-container-prd"
+         ContainerPort: 80
+Hooks:
+  - AfterAllowTestTraffic: "arn:aws:lambda:ap-northeast-2:754780237738:function:FetchTestPortForECSContainerLB"

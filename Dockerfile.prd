@@ -1,0 +1,14 @@
+FROM node:lts-alpine as build 
+
+WORKDIR /app
+
+COPY . .
+RUN yarn install
+RUN cd services/szs-rdd && yarn install 
+
+RUN cd services/szs-rdd && yarn build:prd
+
+FROM nginx
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf 
+
+COPY --from=build /app/services/szs-rdd/build /usr/share/nginx/html

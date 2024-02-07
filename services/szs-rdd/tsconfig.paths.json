@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"],
+      "@3o3-internal/layout": ["../../ui/layout/src"],
+      "@3o3-internal/components": ["../../ui/components/src"],
+      "@3o3-internal/hooks": ["../../libraries/hooks/src"],
+      "@3o3-internal/utils": ["../../libraries/utils/src"]
+    }
+  }
+}

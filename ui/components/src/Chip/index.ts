@@ -1,0 +1,8 @@
+export type { ChipProps } from './Chip'
+export { default as Chip } from './Chip'
+export type { ChipsProps } from './Chips'
+export { default as Chips } from './Chips'
+export type { FilterChipProps } from './FilterChip'
+export { default as FilterChip } from './FilterChip'
+export type { FilterChipsProps } from './FilterChips'
+export { default as FilterChips } from './FilterChips'
